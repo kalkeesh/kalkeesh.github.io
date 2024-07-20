@@ -23,9 +23,121 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<style>
+        .hover-text {
+            font-size: 20px;
+            transition: color 0.3s ease, font-size 0.3s ease;
+        }
+        .hover-text:hover {
+            color:#ffbd39; /* Change the color on hover */
+            font-size: 100px; /* Change the size on hover */
+        }
+		.color-danger {
+			color: #e3342f; /* Red color */
+		    }
+		
+		.ftco-footer-social {
+			list-style: none;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		    }
+		  .ftco-footer-social li {
+			margin: 0 10px;
+			position: relative;
+		    }
+		  .ftco-footer-social li a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			color: inherit;
+			width: 40px; /* Initial icon size */
+			height: 40px;
+			border-radius: 50%;
+			background-color: #ddd; /* Default icon background color */
+			transition: width 0.5s, background-color 0.5s;
+			position: relative;
+			overflow: hidden;
+			white-space: nowrap;
+		    }
+		  
+		  .ftco-footer-social li .icon {
+			display: inline-block;
+			font-size: 20px; /* Adjust icon size */
+			transition: transform 0.5s;
+			margin-right: 10px; /* Space between icon and text */
+		    }
+		  .ftco-footer-social li .icon.linkedin {
+			color: #0e76a8;
+		    }
+		  .ftco-footer-social li .icon.github {
+			color: #333;
+		    }
+		  .ftco-footer-social li .icon.instagram {
+			color: #e4405f;
+		    }
+		  .ftco-footer-social li .name {
+			display: inline-block;
+			margin-left: 0px;
+			opacity: 0;
+			transition: opacity 0.5s;
+			font-size: 16px; /* Show the text */
+		    }
+		  .ftco-footer-social li .name-linkedin {
+			color: #0e76a8; /* LinkedIn blue */
+		    }
+		  .ftco-footer-social li .name-github {
+			color: #333; /* GitHub black */
+		    }
+		  .ftco-footer-social li .name-instagram {
+			color: #e4405f; /* Instagram gradient */
+		    }
+		  .ftco-footer-social li:hover a {
+			width: 100px; /* Expand to fit content */
+			padding: 0 10px; /* Add some padding */
+			border-radius: 100px; /* Maintain circular shape with expanded width */
+		    }
+		  .ftco-footer-social li:hover .icon {
+			transform: translateY(30px); /* Keep icon in place */
+		    }
+		  .ftco-footer-social li:hover .name {
+			opacity: 1;
+		    }
+		  .ftco-footer-social li:hover .name-linkedin {
+			background-color: transparent; /* Remove background color */
+		    }
+		  .ftco-footer-social li:hover .name-github {
+			background-color: transparent; /* Remove background color */
+		    }
+		  .ftco-footer-social li:hover .name-instagram {
+			background-color: transparent; /* Remove background color */
+		    }
+			.card-effect {
+				display: block;
+				position: relative;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+				transition: all 0.3s ease-in-out;
+			}
+		
+			.card-effect:hover {
+				box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
+			}
+		
+			.zoom-effect {
+				transition: transform 0.3s ease-in-out;
+			}
+		
+			.zoom-effect:hover {
+				transform: scale(1.05);
+			}
+		</style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
+
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
@@ -54,7 +166,7 @@
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_55.jpeg);">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_74.jpeg);">
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -73,7 +185,7 @@
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_74.jpeg);">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_55.jpeg);">
 	          		<div class="overlay"></div>
 	          	</div>
 		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
@@ -102,8 +214,8 @@
     			<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
     				<div class="row justify-content-start pb-3">
 		          <div class="col-md-12 heading-section ftco-animate">
-		          	<h1 class="big">About</h1>
-		            <h2 class="mb-4">About Me</h2>
+		          	<h1 class="big">About Me</h1>
+		            <h2 class="mb-4 hover-text">About Me</h2>
 		            <p>Hey there! I'm a developer who loves turning caffeine into code and finding insights in data that others might miss. 
 					But don't peg me as just a tech nerd! I’m socially savvy and love a good laugh with the team. Whether it's brainstorming brilliant ideas or just cracking a joke to lighten the mood, I’m all in. If you’re looking for someone who’s both smart and fun, I’m your person!</p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
@@ -134,15 +246,18 @@
     	<div class="container">
     	<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
+          	<h1 class="big big-2 " >Resume</h1>
+            <h2 class="mb-4 hover-text">Resume</h2>
 			<div class="row">
 				<div class="col-md-9">
 					<p>
 						Greetings, fellow humans! I'm your friendly neighborhood developer who turns coffee into code like a barista with a keyboard. While I do have a knack for finding data insights that would make Sherlock Holmes jealous. I'm the one who can debug a program and crack a dad joke at the perfect moment. Whether solving problems or sharing laughs, I’m your go-to for both brainpower and belly laughs. If you need someone sharp and hilarious, I’m your ultimate combo!					</p>
 				</div>
 				<div class="col-md-3">
-					<img src="images/bg_100.jpg" alt="Small Image" style="width: 100%;">
+					<!-- <a href="https://www.instagram.com/kalki_2004a.d?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="block-20 zoom-effect card-effect" style="background-image: url('images/bg_100.jpg');" target="_blank">
+					</a> -->
+					<a href="https://www.instagram.com/kalki_2004a.d?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class=" zoom-effect card-effect"> 
+						<img src="images/bg_100.jpg" alt="Small Image" style="width: 100%;"></a> 
 				</div>
 
 			</div>
@@ -152,7 +267,7 @@
 	
 		<div class="row">
 			<!-- <h1 class="big-4">INTENSHIPS</h1> -->
-			<h1 class="big-4" style="font-weight: bolder; font-size: 2em; text-transform: uppercase; letter-spacing: 0.1em;">INTERNSHIPS</h1>
+			<h1 class="big-4 " style="font-weight: bolder; font-size: 2em; text-transform: uppercase; letter-spacing: 0.1em; ">INTERNSHIPS</h1>
 			<div class="underline"></div>
 		</div>
 		<div class="row">
@@ -262,8 +377,8 @@
 			<div class="container">
 				<div class="row justify-content-center pb-5">
           <div class="col-md-12 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Skills</h1>
-            <h2 class="mb-4">My Skills</h2>
+          	<h1 class="big big-2">My Skills</h1>
+            <h2 class="mb-4 hover-text">My Skills</h2>
             <p></p>
           </div>
         </div>
@@ -338,35 +453,13 @@
 			</div>
 		</section>
 
-		  <style>
-			.card-effect {
-				display: block;
-				position: relative;
-				border-radius: 10px;
-				overflow: hidden;
-				box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
-				transition: all 0.3s ease-in-out;
-			}
-		
-			.card-effect:hover {
-				box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6);
-			}
-		
-			.zoom-effect {
-				transition: transform 0.3s ease-in-out;
-			}
-		
-			.zoom-effect:hover {
-				transform: scale(1.05);
-			}
-		</style>
 		
 		<section class="ftco-section" id="projects-section">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-5">
 					<div class="col-md-7 heading-section text-center ftco-animate">
 						<h1 class="big big-2">Projects</h1>
-						<h2 class="mb-4">Projects</h2>
+						<h2 class="mb-4 hover-text">Projects</h2>
 						<p>Below are some of my best projects.</p>
 					</div>
 				</div>
@@ -468,9 +561,6 @@
         </div>
       </div>
     </section>
-
-
-	  
 	  
     <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/image_2.jpg)">
 			<div class="container">
@@ -488,8 +578,8 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
+            <h1 class="big big-2">Contact Me</h1>
+            <h2 class="mb-4 hover-text">Contact Me</h2>
 			<div class="row">
 				<div class="col-md-9" style="text-align: left;">
 					<p>Want to chat? Whether it's email, phone, or a good old-fashioned message in a bottle, I'm all ears! Let's connect and make things happen.</p>
@@ -579,91 +669,9 @@
       </div>
 	  <br>
 	  <br>
-<style>
-		
-.color-danger {
-	color: #e3342f; /* Red color */
-  }
 
-.ftco-footer-social {
-	list-style: none;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  .ftco-footer-social li {
-	margin: 0 10px;
-	position: relative;
-  }
-  .ftco-footer-social li a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	color: inherit;
-	width: 40px; /* Initial icon size */
-	height: 40px;
-	border-radius: 50%;
-	background-color: #ddd; /* Default icon background color */
-	transition: width 0.5s, background-color 0.5s;
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-  }
-  
-  .ftco-footer-social li .icon {
-	display: inline-block;
-	font-size: 20px; /* Adjust icon size */
-	transition: transform 0.5s;
-	margin-right: 10px; /* Space between icon and text */
-  }
-  .ftco-footer-social li .icon.linkedin {
-	color: #0e76a8;
-  }
-  .ftco-footer-social li .icon.github {
-	color: #333;
-  }
-  .ftco-footer-social li .icon.instagram {
-	color: #e4405f;
-  }
-  .ftco-footer-social li .name {
-	display: inline-block;
-	margin-left: 0px;
-	opacity: 0;
-	transition: opacity 0.5s;
-	font-size: 16px; /* Show the text */
-  }
-  .ftco-footer-social li .name-linkedin {
-	color: #0e76a8; /* LinkedIn blue */
-  }
-  .ftco-footer-social li .name-github {
-	color: #333; /* GitHub black */
-  }
-  .ftco-footer-social li .name-instagram {
-	color: #e4405f; /* Instagram gradient */
-  }
-  .ftco-footer-social li:hover a {
-	width: 100px; /* Expand to fit content */
-	padding: 0 10px; /* Add some padding */
-	border-radius: 100px; /* Maintain circular shape with expanded width */
-  }
-  .ftco-footer-social li:hover .icon {
-	transform: translateY(30px); /* Keep icon in place */
-  }
-  .ftco-footer-social li:hover .name {
-	opacity: 1;
-  }
-  .ftco-footer-social li:hover .name-linkedin {
-	background-color: transparent; /* Remove background color */
-  }
-  .ftco-footer-social li:hover .name-github {
-	background-color: transparent; /* Remove background color */
-  }
-  .ftco-footer-social li:hover .name-instagram {
-	background-color: transparent; /* Remove background color */
-  }
-</style>
+
+
 
 <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 	<li class="ftco-animate" style="color: #ccc;">Find me on</li>
