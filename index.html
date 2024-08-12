@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>𝚔𝚊𝚕𝚔𝚒-𝚙𝚘𝚛𝚝𝚏𝚘𝚕𝚒𝚘</title>
-
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -134,9 +135,152 @@
 			.zoom-effect:hover {
 				transform: scale(1.05);
 			}
+
+			@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+	
+			#carousel * {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Jost", sans-serif;
+			}
+	
+			.dropdown-bar {
+				width: 100%;
+				background-color: #0b0d0f;
+				color: #ffbd39;
+				border: 1px solid #ffbd39;
+				padding: 15px;
+				cursor: pointer;
+				text-align: center;
+				font-size: 18px;
+				font-weight: 700;
+				position: relative;
+				transition: background-color 0.3s;
+				z-index: 1; /* Ensure dropdown bar is below carousel */
+			}
+	
+			.dropdown-bar:hover {
+				background-color: #070b0f;
+			}
+	
+			#carousel {
+				overflow: hidden;
+				position: relative; /* Ensure positioning context for child elements */
+			}
+	
+			#carousel .slider-container {
+				width: 100%;
+				height: 50vh; /* Reduce the height of the carousel */
+				background-image: url('Images/bg-img.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative; /* Ensure positioning context for child elements */
+				z-index: 2; /* Ensure carousel is above dropdown bar */
+			}
+	
+			#carousel .slider-images {
+				display: flex;
+				align-items: center;
+				gap: 10px; /* Reduce the gap between images */
+			}
+	
+			#carousel .slider-images img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 6px;
+			}
+	
+			#carousel .slider-img {
+				width: 80px; /* Reduce the width of the images */
+				height: 200px; /* Reduce the height of the images */
+				border-radius: 6px;
+				cursor: pointer;
+				position: relative;
+				transition: 0.7s ease;
+			}
+	
+			#carousel .slider-images .slider-img:first-child,
+			#carousel .slider-images .slider-img:last-child {
+				height: 180px;
+			}
+	
+			#carousel .slider-images .slider-img:nth-child(2),
+			#carousel .slider-images .slider-img:nth-child(6) {
+				height: 220px;
+			}
+	
+			#carousel .slider-images .slider-img:nth-child(3),
+			#carousel .slider-images .slider-img:nth-child(4),
+			#carousel .slider-images .slider-img:nth-child(5) {
+				height: 250px;
+			}
+	
+			#carousel h1 {
+				font-family: "Jost", sans-serif;
+				font-size: 30px;
+				font-weight: 700;
+				text-align: left;
+				text-transform: uppercase;
+				color: #fff;
+				position: absolute;
+				top: 50%;
+				left: -10%;
+				transform: rotate(270deg);
+				transition: 0.7s ease;
+			}
+	
+			#carousel .details {
+				position: absolute;
+				bottom: 20px;
+				left: 20px;
+			}
+	
+			#carousel .details h2 {
+				font-family: "Jost", sans-serif;
+				font-size: 18px;
+				font-weight: 700;
+				text-align: left;
+				line-height: 24px;
+				text-transform: uppercase;
+				color: #fff;
+				transition: 0.7s ease;
+				display: none;
+			}
+	
+			#carousel .details p {
+				font-family: "Jost", sans-serif;
+				font-size: 16px;
+				font-weight: 700;
+				text-align: left;
+				line-height: 20px;
+				text-transform: uppercase;
+				color: #fff;
+				transition: 0.7s ease;
+				display: none;
+			}
+	
+			#carousel .slider-img.active {
+				width: 500px !important; /* Adjust the width when active */
+				height: 300px !important; /* Adjust the height when active */
+			}
+	
+			#carousel .slider-img.active h1 {
+				display: none;
+			}
+	
+			#carousel .slider-img.active .details p,
+			#carousel .slider-img.active .details h2 {
+				display: block;
+			}
 		</style>
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="width: 100%;">
 
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -486,7 +630,7 @@
 					</div>
 					<div class="col-md-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
-							<a href="https://teachtvibe.streamlit.app" class="block-20 zoom-effect card-effect" style="background-image: url('images/project-2.png');"target="_blank">
+							<a href="https://teachvibe.streamlit.app" class="block-20 zoom-effect card-effect" style="background-image: url('images/project-2.png');"target="_blank">
 							</a>
 							<div class="text mt-3 float-right d-block">
 								<h3 class="heading"><a href="https://github.com/kalkeesh/teacherComment_sentiment_analysis/tree/main" target="_blank">Lecturer Sentiment Analysis</a></h3>
@@ -669,10 +813,80 @@
       </div>
 	  <br>
 	  <br>
+    </section>
+    <div class="container mt-4">
+        <div class="dropdown-bar" data-bs-toggle="collapse" data-bs-target="#carousel" aria-expanded="false" aria-controls="carousel">
+            WANNA KNOW ABOUT ME MORE.. THEN CLICK ON..!!
+        </div>
 
-
-
-
+        <section id="carousel" class="collapse">
+            <div class="slider-container">
+                <div class="slider-images">
+                    <div class="slider-img">
+                        <img src="images/1.jpg" alt="1" />
+                        <h1>Kalki</h1>
+                        <div class="details">
+                            <h2>Kalki</h2>
+                            <p>Backend Developer</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="images/2.jpg" alt="2" />
+                        <h1>Candid</h1>
+                        <div class="details">
+                            <h2>cool </h2>
+                            <p>looking Developer</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="images/3.jpg" alt="3" />
+                        <h1>Kalkeesh</h1>
+                        <div class="details">
+                            <h2>Professional</h2>
+                            <p>Coder</p>
+                        </div>
+                    </div>
+                    <div class="slider-img active">
+                        <img src="images/4.jpg" alt="4" />
+                        <h1>Kalki</h1>
+                        <div class="details">
+                            <h2>Data Scientist</h2>
+                            <p>Gen Ai</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="images/5.jpg" alt="5" />
+                        <h1>code hero</h1>
+                        <div class="details">
+                            <h2>Friendly neighbourhood</h2>
+                            <p>coder</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="images/6.jpg" alt="6" />
+                        <h1>code</h1>
+                        <div class="details">
+                            <h2>Django</h2>
+                            <p>Developer</p>
+                        </div>
+                    </div>
+                    <div class="slider-img">
+                        <img src="images/7.jpg" alt="7" />
+                        <h1>Me..!!</h1>
+                        <div class="details">
+                            <h2>MongoDB &</h2>
+                            <p>sql Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+			
+		
+    </div>
+   <br>
+   <br>
+   <br>
 <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
 	<li class="ftco-animate" style="color: #ccc;">Find me on</li>
 	<li class="ftco-animate">
@@ -694,17 +908,7 @@
 	  </a>
 	</li>
   </ul>
-<!-- 
-	  <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-		<li class="ftco-animate normal-txt">Find me on  </li>
-		<li class="ftco-animate"><a href="https://www.linkedin.com/in/kalkeesh-jami-42891b260/" target="_blank"><span class="icon-linkedin"></span></a></li>  
-		<li class="ftco-animate"><a href="https://github.com/kalkeesh" target="_blank"><span class="icon-github" ></span></a></li>
-		<li class="ftco-animate"><a href="https://www.instagram.com/kalki_2004a.d?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><span class="icon-instagram"></span></a></li>
-	  </ul> -->
 	 <br>
-    </section>
-
-
     <footer class="ftco-footer ftco-section">
 		<div class="container">
 			<div class="col-md-12 text-center">
@@ -735,6 +939,17 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
-    
-  </body>
+  <script>
+	jQuery(document).ready(function ($) {
+		$(".slider-img").on("mouseover", function () {
+			$(".slider-img").removeClass("active");
+			$(this).addClass("active",);
+		});
+	});
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+  
 </html>
